@@ -9,6 +9,7 @@ public class TestMain {
         boolean isNullOrEmpty = Strings.isNullOrEmpty(input);
         System.out.println(isNullOrEmpty);
 
+        StringBuilder stringBuilder = new StringBuilder();
     }
 
 
