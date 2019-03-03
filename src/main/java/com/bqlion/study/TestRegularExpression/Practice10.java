@@ -24,4 +24,3 @@ public class Practice10 {
         }
     }
 }
-//
