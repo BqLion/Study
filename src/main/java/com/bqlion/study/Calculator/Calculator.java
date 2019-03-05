@@ -1,5 +1,4 @@
-package com.bqlion.study;
-import net.mindview.util.Print.*;
+package com.bqlion.study.Calculator;
 
 import static net.mindview.util.Print.print;
 

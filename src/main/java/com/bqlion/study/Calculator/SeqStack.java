@@ -1,4 +1,4 @@
-package com.bqlion.study;
+package com.bqlion.study.Calculator;
 
 public class SeqStack {
     String[] StackElem;
