@@ -12,6 +12,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -25,13 +26,13 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>27.0.1-jre</version>
-        </dependency>
+            </dependency>
         <dependency>
-            　  <groupId>com.net</groupId>
-                <artifactId>mindview</artifactId>
-                <version>1.0.0</version>
-                <scope>system</scope>
-                <systemPath>${project.basedir}/src/main/resources/lib/net.jar</systemPath>
+            <groupId>net.mindview</groupId>
+            <artifactId>util</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/net.jar</systemPath>>
         </dependency>
     </dependencies>
 </project>
