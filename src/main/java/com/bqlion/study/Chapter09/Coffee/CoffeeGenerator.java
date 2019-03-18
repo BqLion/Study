@@ -1,6 +1,5 @@
 package com.bqlion.study.Chapter09.Coffee;
 import java.util.*;
-import net.mindview.util.*;
 
 public  class CoffeeGenerator
 implements Generator<coffee>,Iterable<coffee>{

@@ -1,5 +1,4 @@
-package com.bqlion.study.Chapter09;
-import net.mindview.util.*;
+package com.bqlion.study.Chapter09.Coffee;
 
 public class ThreeTuple<A,B,C>extends TwoTuple<A,B> {
     public  final C third;

@@ -1,4 +1,4 @@
-package com.bqlion.study.Chapter09;
+package com.bqlion.study.Chapter09.Coffee;
 
 public class FourTuple<A,B,C,D>extends ThreeTuple<A,B,C> {
     public final D fourth;

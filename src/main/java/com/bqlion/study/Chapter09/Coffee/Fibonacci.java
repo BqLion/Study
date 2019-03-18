@@ -1,5 +1,4 @@
 package com.bqlion.study.Chapter09.Coffee;
-import net.mindview.util.*;
 
 public class Fibonacci implements Generator<Integer> {
     private int count = 0;

@@ -1,4 +1,4 @@
-package com.bqlion.study.Chapter09;
+package com.bqlion.study.Chapter09.Coffee;
 
 public class Holder3<T>{
     private T a;

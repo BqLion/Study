@@ -1,4 +1,4 @@
-package com.bqlion.study.Chapter09;
+package com.bqlion.study.Chapter09.Coffee;
 class Automobile{}
 
 public class Holder1{

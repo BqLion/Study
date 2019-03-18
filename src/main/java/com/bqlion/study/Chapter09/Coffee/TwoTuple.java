@@ -1,4 +1,4 @@
-package com.bqlion.study.Chapter09;
+package com.bqlion.study.Chapter09.Coffee;
 import net.mindview.util.*;
 
 public class TwoTuple<A,B> {
