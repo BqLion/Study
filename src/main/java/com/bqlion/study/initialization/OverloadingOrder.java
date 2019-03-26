@@ -6,14 +6,14 @@ import static net.mindview.util.Print.print;
 
 public class OverloadingOrder {
     static void f(String s,int i){
-        print("String :" + s + " , int : " + i);
+        print("String1 :" + s + " , int : " + i);
     }
     static void f(int i,String s){
         print("int :" + i + " .  int : " + s);
     }
 
     public static void main(String[] args) {
-        f("String first",11);
+        f("String1 first",11);
         f(22,"Int first");
     }
 }
