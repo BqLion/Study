@@ -68,6 +68,10 @@ public final class String1 {
         return i;
     }
 
+    public char get(int index){
+        return this.value[index];
+
+    }
     public String toString(){
         return new String(this.value);
     }
