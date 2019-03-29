@@ -1,4 +1,4 @@
-package com.bqlion.DataStructure.SString;
+package com.bqlion.DataStructure.SString.StringAlgorithm;
 
 public class BruteFroce {
     private static int count = 0;
@@ -23,10 +23,5 @@ public class BruteFroce {
     }
     public static int indexOf(String target,String pattern){
         return indexOf(target,pattern,0);
-    }
-    public static void main(String args[]){
-        String target = "abbabaaba",pattern =  "aba";
-        System.out.println(indexOf(target,pattern));
-        System.out.println("count = " + count);
     }
 }
