@@ -31,4 +31,26 @@ public class Note {
                                【crud性能比较：写个计时器循环插入数据进去】
 3.不贪快要深入。
 
+
+问题一:Array - Matrix Line 16：
+为什么书上的this(n,n)就OK我这里这么写就无法编译？
+缺省构造函数中的this(n,n)是否指代的是非缺省函数？
+this到底该怎么理解？
+this.value到底有无必要？
+直接value好像也可以直接通过编译
+
+问题二：Array -Matrix Line 37:
+因为get函数需要返回int型不得不设为int型函数
+那么如何表示错误？
+直接return，return null都不可以；
+这里用return 0代替，但是不能分辨是报错还是真的取出的是0元素?
+
+问题三：Array -Matrix Line 58:
+add函数功能是两个矩阵相加，C[][] = A[][] + B[][]
+A[i][j]、B[i][j] 用 get(i,j)函数来获取，书上直接this.value[i][j] + b.value.[i][j]
+value数组为private权限
+private权限限定只有本类可见，相同包不同包中的其他类和子类均不可见
+在测试函数中：
+new Matrix C= new Matirx A.add(new Matrix B)时，A B C 应该是三个不同的类不可直接调用value数组吧
+
 */
