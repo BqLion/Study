@@ -1,5 +1,4 @@
 package com.bqlion.DataStructure.Tree;
-
 import com.bqlion.DataStructure.Stack.LinkedStack;
 
 /* *
@@ -10,12 +9,25 @@ public class BinaryTree <E>{
 
     public BinaryTree(){
         root = null;
-    }
+    }       //构造函数，缺省参数 则根为null
     public BinaryTree(BinaryTreeNode<E> root){
         this.root = root;
-    }
-    public BinaryTree(String str){
-        //
+    }//构造函数，给定node为根
+    public BinaryTree(E[] preorder){ this.root = create(preorder); }//构造函数。给定先序遍历空位null的E[]数组
+
+    private BinaryTreeNode<E> create(E[] preorder){
+        int i = 0;
+        BinaryTreeNode<E> p = null;     //根部为null
+        if(i < preorder.length){
+            E elem = preorder[i];
+            i ++;
+            if(elem != null){
+                p = new BinaryTreeNode<E>(elem);
+                p.left = create(preorder);
+                p.right = create(preorder);
+            }
+        }
+        return p;
     }
 
     public boolean isEmpty(){
@@ -89,5 +101,26 @@ public class BinaryTree <E>{
         else
         p.data = element;
         return true;
+    }
+
+    public int height(){
+        return height(root);
+    }
+
+    public int height(BinaryTreeNode<E> p) {
+        if (p != null) {
+            int ld = height(p.left);
+            int rd = height(p.right);
+            return (ld >= rd) ? ld + 1 : rd + 1;
+        }
+        return 0;
+    }
+
+    public void display(){
+        for (int i = 0; i <= height(); i++){
+            for(int j = 0; j <= (2^j - 1); j++){
+                System.out.println();
+            }
+        }
     }
 }

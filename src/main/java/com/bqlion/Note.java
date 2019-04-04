@@ -53,4 +53,17 @@ private权限限定只有本类可见，相同包不同包中的其他类和子�
 在测试函数中：
 new Matrix C= new Matirx A.add(new Matrix B)时，A B C 应该是三个不同的类不可直接调用value数组吧
 
+问题四：BinaryTree line27：
+递归也有退出条件，i< length,i++
+如何去思考去理解递归呢？
+       BinaryTree line 112:
+
+       public int height(BinaryTreeNode<E> p) {
+        if (p != null) {
+            int ld = height(p.left);
+            int rd = height(p.right);
+            return (ld >= rd) ? ld + 1 : rd + 1;
+        }
+        return 0;
+    }
 */
