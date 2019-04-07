@@ -1,8 +1,13 @@
 package com.bqlion.DataStructure.Tree;
 import com.bqlion.DataStructure.Stack.LinkedStack;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
 /* *
- * Created by BqLion on 2019/4/1
+ * Created by BqLion on 2019/4/6
  */
 public class BinaryTree <E>{
     private BinaryTreeNode<E> root;     //根节点是二叉树的本体
@@ -14,9 +19,8 @@ public class BinaryTree <E>{
         this.root = root;
     }//构造函数，给定node为根
     public BinaryTree(E[] preorder){ this.root = create(preorder); }//构造函数。给定先序遍历空位null的E[]数组
-
+    int i = 0;
     private BinaryTreeNode<E> create(E[] preorder){
-        int i = 0;
         BinaryTreeNode<E> p = null;     //根部为null
         if(i < preorder.length){
             E elem = preorder[i];
@@ -116,11 +120,46 @@ public class BinaryTree <E>{
         return 0;
     }
 
-    public void display(){
+ /*   public void display(){
         for (int i = 0; i <= height(); i++){
             for(int j = 0; j <= (2^j - 1); j++){
                 System.out.println();
             }
+            System.out.println("/n");
+        }
+    }
+    */                                  //没有思路，只会迭代写不下去了。考虑问题要善用数据结构，如下队列：
+
+    public ArrayList<ArrayList<Object>> display(){
+        ArrayList<ArrayList<Object>> result = new ArrayList<>();        //输出树可类比矩阵，二维数组好用
+        if(root == null){
+            return result;
+        }
+
+        Queue<BinaryTreeNode>q = new LinkedList<BinaryTreeNode>();      //
+        q.add(root);
+        while(!q.isEmpty()){
+            int current = 0;
+            int size = q.size();                           //root先入队，当队列非空时，入队的根全出，子节点全入
+            ArrayList<Object>value = new ArrayList<>();
+            Iterator<BinaryTreeNode>it = q.iterator();
+            while(it.hasNext()){
+                value.add(it.next().data);     //把队列里的所有元素加入一维数组
+            }
+            result.add(value);
+            while(current < size){             //本层节点全出，子节点全入
+            BinaryTreeNode node = q.poll();
+            if(node.left != null)q.add(node.left);
+            if(node.right != null)q.add(node.right);
+            current++;
+            }
+        }
+        return result;
+    }
+
+    public void PrintTree(ArrayList tree){
+        for(int i = 0; i < tree.size(); i++){
+            System.out.println(tree.toArray()[i]);
         }
     }
 }
