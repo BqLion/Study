@@ -66,4 +66,20 @@ new Matrix C= new Matirx A.add(new Matrix B)时，A B C 应该是三个不同的
         }
         return 0;
     }
+
+问题五：
+ThreadBinaryTree.java
+line 17 -- 28
+
+关于递归：
+
+for(i = 0 ;i < length; i++)     /写在函数外边的i = 0是否是否规范？递归的一般性写法和思考方式是什么？
+{.left = preorder
+ .right = preorder
+}
+
+问题六：
+ThreadBinaryTree。java
+line 37 -- 46如何理解递归？遇见类似的树类定义又该如何去组织思维？
+
 */
