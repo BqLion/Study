@@ -31,20 +31,48 @@ public class ThreadBinaryTree<E>{
     private ThreadBinaryTreeNode<E>front = null;        //p的前驱节点front置为空,为一工作指针和双向循环链表类似
     private void inorderThread(ThreadBinaryTreeNode<E> p){      //create是建立线索二叉树的left  right指针，本函数处理两个tag
         if(p != null){
-            inorderThread(p.left);
-            if(p.left == null) {
+            inorderThread(p.left);          //递归地处理p的左右子树
+            if(p.left == null) {            //左或者右子树为空，则tag为1，
                 p.ltag = 1;
-                p.left = front;
+                p.left = front;              //front指针方便p指向前方
             }
             if(p.right == null)
-                p.rtag = 1;
-            if(front != null && front.rtag == 1)
-                front.right = p;
-            front = p;
+                p.rtag = 1;                 //right为空则指向中序遍历的next
+            if(front != null && front.rtag == 1)    //
+                front.right = p;            //front的right指过来
+            front = p;                      //front前进一步
             inorderThread(p.right);
             }
         }
+
+       public ThreadBinaryTreeNode<E>inNext(ThreadBinaryTreeNode<E>p){
+       if(p.rtag == 1)
+        p = p.right;
+       else {
+           p = p.right;                     //中序遍历的逻辑就是先右子树一格，然后尝试左转到底
+           while(p.ltag ==0 )
+               p = p.left;
+       }
+       return p;
+    }
+
+    public void inOrder(){
+         ThreadBinaryTreeNode<E>p = root;
+         if(p != null){
+             System.out.println("中根次序遍历：  ");
+             while(p.ltag == 0)
+                 p = p.left;
+             do{
+                 System.out.println(p.data + " ");
+                 p = inNext(p);
+             } while(p != null);
+
+             System.out.println();
+         }
+    }
+
     }
 
 
-}
+
+
