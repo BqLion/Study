@@ -1,6 +1,6 @@
 package com.bqlion.DataStructure.Tree;
-
-import com.bqlion.DataStructure.Queue.Queue;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /* *
  * Created by BqLion on 2019/4/15
@@ -238,8 +238,7 @@ public abstract class AbstractBTreeNode<K extends Comparable<K>>{            //C
      * @param nkey key amount to set
      * @return old key amount
      */
-    protected abstract int setKey(int nkey);
-
+    protected abstract int setNKey(int nkey);
     /**
      * key amount of current node
      * @return key amount of current node
@@ -257,7 +256,7 @@ public abstract class AbstractBTreeNode<K extends Comparable<K>>{            //C
      * @param nchild child amount
      * @return old child amount
      */
-    protected abstract int setNChild(int nchild);
+    protected abstract int setNchild(int nchild);
 
     /**
      * get index of given key

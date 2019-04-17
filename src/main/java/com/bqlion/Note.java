@@ -82,4 +82,13 @@ for(i = 0 ;i < length; i++)     /写在函数外边的i = 0是否是否规范？
 ThreadBinaryTree。java
 line 32 -- 45如何理解递归？遇见类似的树类定义又该如何去组织思维？
 
+
+问题七：
+AbstractBTreeNode:
+为什么要写成一个抽象类加一个具体实现的类呢？
+这样做的好处在哪里
+为什么抽象类中只定义了degree
+在具体实现的类里定义了keys children nkeys 等等，
+为何不直接写在同一个类里？
+
 */
