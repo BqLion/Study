@@ -81,15 +81,100 @@ class BTreeInternalNode <K extends Comparable<K>> extends AbstractBTreeNode<K> {
 
     @Override
     void insertNotFull(K key){
-        checkNotFull();
-        this.insertKey(key);
+        checkNotFull();         //确定是否是满的
+        int i = 0;
+        while(i < nkey && key.compareTo((K)keys[i]) >= 0){          //比大小找到合适位置
+            i++;
+        }
+        if(this.children[i].isFull()){      //如果要插入的位置的孩子满了，就把孩子分开
+            this.splitChild(i);
+            if(key.compareTo((K)this.keys[i]) >= 0){//再一次循环找到合适位置
+                i++;
+            }
+        }
+        this.children[i].insertNotFull(key);        //
     }
 
     @Override
-    void deleteNotEmpty(K key){
-        this.deleteKey(key);
-    }
+    void deleteNotEmpty(K key) {
+        if (this.existsKey(key)) {
+            int index = indexOfKey(key);
+            AbstractBTreeNode<K> node;
+            if ((node = children[index]).nkey() >= degree) {
+                K repKey = node.getKey(node.nkey() - 1);
+                node.deleteNotEmpty(repKey);
+                setKey(repKey, index);
+            } else if ((node = children[index + 1]).nkey() >= degree) {
+                K repKey = node.getKey(0);
+                node.deleteNotEmpty(repKey);
+                setKey(repKey, index);
+            } else {
+                node = children[index];
+                node.merge(key, children[index + 1]);
+                this.deleteKey(index);
+                this.deleteChild(index + 1);
+                node.deleteNotEmpty(key);
+            }
+        }
 
+        //key may exist in child
+        else {
+            int i = 0;
+            //find proper child the key may exists in
+            while (i < nkey) {
+                if (key.compareTo((K) keys[i]) < 0)
+                    break;
+                i++;
+            }
+            AbstractBTreeNode<K> target = children[i];
+            //child has enough key
+            if (target.nkey() >= degree) {
+                target.deleteNotEmpty(key);
+            } else {
+                AbstractBTreeNode<K> sibling;
+                //try to find replacement from predecessor
+                if (i > 0 && (sibling = children[i - 1]).nkey() >= degree) {
+                    if (!target.isLeaf()) {
+                        AbstractBTreeNode<K> sub = sibling.deleteChild(nchild); //last child
+                        target.insertChild(sub, 0);
+                    }
+                    K repKey = sibling.deleteKey(sibling.nkey() - 1);    //maximum key
+                    repKey = setKey(repKey, i - 1);
+                    target.insertKey(repKey);
+                    target.deleteNotEmpty(key);
+                }
+                //try to find replacement from follower
+                else if (i < nkey && (sibling = children[i + 1]).nkey() >= degree) {
+                    if (!target.isLeaf()) {
+                        AbstractBTreeNode<K> sub = sibling.deleteChild(0);  //first child
+                        target.insertChild(sub, target.nchild());
+                    }
+                    K repKey = sibling.deleteKey(0);                    //minimum key
+                    repKey = setKey(repKey, i);
+                    target.insertKey(repKey);
+                    target.deleteNotEmpty(key);
+                }
+                //merge child with one of it's sibling
+                else {
+                    //merge with predecessor sibling
+                    if (i > 0) {
+                        K repKey = this.deleteKey(i - 1);
+                        sibling = children[i - 1];
+                        sibling.merge(repKey, target);
+                        this.deleteChild(target);
+                        sibling.deleteNotEmpty(key);
+                    } else {
+                        K repKey = this.deleteKey(i);
+                        sibling = children[i + 1];
+                        target.merge(repKey, sibling);
+                        deleteChild(i + 1);
+                        target.deleteNotEmpty(key);
+                    }
+                }
+            }
+
+        }
+    }
 
     @Override
     protected void splitChild(int child) {

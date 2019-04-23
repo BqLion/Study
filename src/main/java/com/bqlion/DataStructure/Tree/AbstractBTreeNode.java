@@ -9,7 +9,7 @@ import java.util.Queue;
     b树是一种m叉树，其中节点满足：一个节点最多有m个子树，根节点不是叶子时，至少有两颗子树。
                                 除根节点外，所有非终端节点至少有m/2颗子树
                                 有s个子树的非叶节点具有n = s-1个关键字
-                                用抽象类先写出一个类的基本函数情况，再用如下文的绿色专业注解说明各个函数的情况
+                                用抽象类先写出一个类的基本函数情况，再用如下文的绿色注解说明各个函数的情况
                                 用@param @return等等注释，非常清晰明了。类似于C的头文件
 
     为什么本文件要写成抽象类：
@@ -64,12 +64,12 @@ public abstract class AbstractBTreeNode<K extends Comparable<K>>{            //C
 
     void insertKey(K key){
         checkNotFull();
-        int i = this.nkey();        //
+        int i = this.nkey();        //nkey is the key number of a node
         while(i > 0 && key.compareTo(this.getKey(i - 1)) < 0){
             this.setKey(this.getKey(i -1),i);
-            i--;                        //数组倒序地依次后移，拉出一个空位
+            i--;                        //setter,getter,  the thinking method
         }
-        this.setkey(key,i);             //空位set，计数器加一
+        this.setKey(key,i);             //空位set，计数器加一
         this.setNKey(this.nkey() + 1);
     }
 
@@ -111,7 +111,7 @@ public abstract class AbstractBTreeNode<K extends Comparable<K>>{            //C
              index ++;
          }
          this.setKey(null,this.nkey() - 1);     //最后不忘把最后一个坑置为空
-         this.setKey(this.nkey() - 1);
+         this.setNKey(this.nkey() - 1);
          return result;
      }
 
@@ -158,13 +158,13 @@ public abstract class AbstractBTreeNode<K extends Comparable<K>>{            //C
      * @param index index of child to insert
      */
     protected void insertChild(AbstractBTreeNode<K>sub,int index){          //
-        int i = this.nchild;
-        while(i >index){
+        int i = this.nchild();
+        while(i > index){
             this.setChild(this.getChild(i - 1),i);
             i --;
         }
         this.setChild(sub,index);
-        this.setNChild(this.nchild() + 1);          //open a gap to insert childsubTree
+        this.setNchild(this.nchild() + 1);          //open a gap to insert childsubTree
     }
 
     /**
@@ -204,7 +204,7 @@ public abstract class AbstractBTreeNode<K extends Comparable<K>>{            //C
                 this.setChild(this.getChild(index + 1),index);
                 index ++;
             }
-            this.setChild(null.index);
+            this.setChild(null,index);
             this.setNchild(this.nchild() - 1);
         }
         return result;
