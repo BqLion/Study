@@ -4,7 +4,7 @@ package com.bqlion.DataStructure.Tree;
  * Created by BqLion on 2019/4/16
  */
 class BTreeInternalNode <K extends Comparable<K>> extends AbstractBTreeNode<K> {   //实现节点：
-    private final Object[] keys;                //keys数组，放的是键值
+    private final Object[] keys;                //keys数组，放的是键值  final变量只能被初始化一次
     private final AbstractBTreeNode<K>[] children;//node数组放的是孩子指针
     private int nkey = 0;           //孩子和键的数量
     private int nchild = 0;
