@@ -4,7 +4,6 @@ package com.bqlion.DataStructure.Tree;
  * Created by BqLion on 2019/4/12
  */
 
-import java.net.HttpURLConnection;
 
 /*
 哈夫曼编码就是用二叉树实现的带权综合最短路径（节点深度）的不定长编码合集

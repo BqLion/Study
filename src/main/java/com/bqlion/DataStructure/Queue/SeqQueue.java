@@ -1,7 +1,5 @@
 package com.bqlion.DataStructure.Queue;
 
-import com.bqlion.study.Calculator.SeqStack;
-
 /*
     循环队列顺序存储结构。
     front指向第一个元素，

@@ -9,6 +9,8 @@ import com.bqlion.DataStructure.List.HSLiinkedList;
  * 领接表表示的图是用一个顺序表存储的 vertex表示
  * 其中vertex 由 data（节点） + 循环链表（边）构成。
  */
+
+/**
 public class AdjListGraph<E>implements GGraph<E>{
     protected SeqList<Vertex<E>>vertexlist;
 
@@ -120,7 +122,7 @@ public class AdjListGraph<E>implements GGraph<E>{
             return -1;
         }
     }
-
+*/
 
 
 

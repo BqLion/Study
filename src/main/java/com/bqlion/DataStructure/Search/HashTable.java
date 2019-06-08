@@ -5,6 +5,8 @@ import com.bqlion.DataStructure.List.SinglyLinkedList;
 /* *
  * Created by BqLion on 2019/5/19
  */
+
+/**
 public class HashTable<E> {
     private SinglyLinkedList<E>[] table;
     public HashTable(int capacity){
@@ -36,7 +38,8 @@ public class HashTable<E> {
     public Node<E>search(E element){
         int key = element.hashCode();
         int i = hash(key);
-        return table[i].search(element);
+        return;
+        // table[i].search(element);
     }
 
     public boolean contain(E element){
@@ -54,3 +57,5 @@ public class HashTable<E> {
     }
 }
 
+
+*/
