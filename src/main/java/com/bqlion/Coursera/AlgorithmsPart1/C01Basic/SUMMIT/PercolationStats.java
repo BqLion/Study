@@ -1,3 +1,4 @@
+package com.bqlion.Coursera.AlgorithmsPart1.C01Basic.SUMMIT;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
