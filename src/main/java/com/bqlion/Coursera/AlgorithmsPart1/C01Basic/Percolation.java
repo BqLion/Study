@@ -1,3 +1,4 @@
+package com.bqlion.Coursera.AlgorithmsPart1.C01Basic;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
