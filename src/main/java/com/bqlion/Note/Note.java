@@ -1,4 +1,4 @@
-package com.bqlion;
+package com.bqlion.Note;
 
 public class Note {
 }
