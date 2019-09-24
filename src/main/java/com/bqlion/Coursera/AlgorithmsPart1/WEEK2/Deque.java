@@ -9,6 +9,8 @@ package com.bqlion.Coursera.AlgorithmsPart1.WEEK2;
 //A double-ended queue or deque (pronounced “deck”) is a generalization of a
 // stack and a queue that supports adding and removing items from
 // either the front or the back of the data structure.
+/**
+
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -177,3 +179,4 @@ public class Deque<Item> implements Iterable<Item> {
      }
 }
 
+*/
