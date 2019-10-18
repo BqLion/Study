@@ -1,7 +1,5 @@
 package com.bqlion.After.DataStruct.List;
 
-import javax.swing.*;
-
 public class SingleLinkedListNode {
 
 /********************field**********************************/
@@ -24,6 +22,7 @@ public class SingleLinkedListNode {
     }
 
 /********************Constructor****************************/
+
 
 /********************Method*********************************/
  public SingleLinkedListNode getNext(){
