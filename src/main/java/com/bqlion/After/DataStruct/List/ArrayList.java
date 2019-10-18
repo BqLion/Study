@@ -54,6 +54,7 @@ public class ArrayList implements List{
             throw new IndexOutOfBoundsException("错误,制定的序号越界");
         return elements[position];
     }
-
-
+    public int getSize(){
+        return numberOfElementInArray;
+    }
 }
