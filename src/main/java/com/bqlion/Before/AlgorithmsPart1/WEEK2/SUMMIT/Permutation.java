@@ -1,8 +1,9 @@
+/**
 package com.bqlion.Before.AlgorithmsPart1.WEEK2;
 
-/* *
+
  * Created by BqLion on 2019/6/15
- */
+
 
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
@@ -18,3 +19,4 @@ public class Permutation {
             StdOut.println(myRandomizedQueue.dequeue());
     }
 }
+ */

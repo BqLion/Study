@@ -1,3 +1,4 @@
+/**
 package com.bqlion.Before.AlgorithmsPart1.C01Basic;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
@@ -106,3 +107,4 @@ public class Percolation {
             return (relationship.connected(n * n, n * n + 1));
     }
 }
+ */

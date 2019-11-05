@@ -1,3 +1,5 @@
+/**
+
 package com.bqlion.Before.AlgorithmsPart1.C01Basic;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
@@ -36,3 +38,4 @@ public class PercolationStats {
         StdOut.println("95% confidence interval" + "[" + p.confidenceLo() + "," + p.confidenceHi() + "]");
     }
 }
+*/

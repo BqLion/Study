@@ -1,3 +1,4 @@
+/*
 package com.bqlion.Before.AlgorithmsPart1.WEEK2;
 
 import edu.princeton.cs.algs4.StdRandom;

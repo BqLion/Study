@@ -1,11 +1,13 @@
-package com.bqlion.Before.AlgorithmsPart1.WEEK2;
+/**
+
+package com.bqlion.Before.AlgorithmsPart1.WEEK2.SUMMIT.;
 
 import java.util.Iterator;
 import edu.princeton.cs.algs4.StdRandom;
 
-/* *
+
  * Created by BqLion on 2019/6/14
- */
+/
 public class RandomizedQueue<Item> implements Iterable<Item> {
     private Item[] Rqueue;
     int count;
@@ -122,3 +124,5 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     public static void main(String[] args){}
 }
+
+ */
