@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Union-main - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\leobitch\AppData\Local\Temp\RSP6636.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Union-main.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\C++\Microsoft Visual Studio\MyProjects\datastructLearning\charpter02\02union\Union-main.c"
+]
+Creating command line "cl.exe @C:\Users\leobitch\AppData\Local\Temp\RSP6636.tmp" 
+Creating temporary file "C:\Users\leobitch\AppData\Local\Temp\RSP6637.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Union-main.pdb" /debug /machine:I386 /out:"Debug/Union-main.exe" /pdbtype:sept 
+".\Debug\Union-main.obj"
+]
+Creating command line "link.exe @C:\Users\leobitch\AppData\Local\Temp\RSP6637.tmp"
+<h3>Output Window</h3>
+Compiling...
+Union-main.c
+Linking...
+
+
+
+<h3>Results</h3>
+Union-main.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

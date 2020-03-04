@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1514140574 source:e:\e\ds\c02\09extenlinkedlist\debug\d\123123\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1523980014 e:\e\ds\c02\01sequencelist\status.h
+
+1525956366 e:\e\ds\c03\01sequencestack\sequencestack.c
+	"SequenceStack.h"
+
+1526562112 e:\e\ds\c03\01sequencestack\sequencestack.h
+	<stdio.h>
+	<stdlib.h>
+	"E:/E/DS/C02/01SequenceList/Status.h"
+
+1526134288 e:\e\ds\c03\07linkqueue\linkqueue.c
+	"LinkQueue.h"
+
+1526134059 e:\e\ds\c03\07linkqueue\linkqueue.h
+	<stdio.h>
+	<stdlib.h>
+	"E:/E/DS/C02/01SequenceList/Status.h"
+

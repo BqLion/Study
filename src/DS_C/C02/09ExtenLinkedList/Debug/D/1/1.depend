@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1525704192 source:e:\e\ds\c02\09extenlinkedlist\debug\d\1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"E:/E/DS/C02/01SequenceList/Status.h"
+
+1523980014 e:\e\ds\c02\01sequencelist\status.h
+

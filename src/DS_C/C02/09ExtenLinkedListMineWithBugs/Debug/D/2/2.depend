@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1524836771 source:e:\e\ds\c02\09extenlinkedlist\debug\d\2\main.c
+	<stdio.h>
+	"E:/E/DS/C02/09ExtenLinkedList/ExtenLinkedList.c"
+
+1524836605 e:\e\ds\c02\09extenlinkedlist\extenlinkedlist.c
+	"ExtenLinkedList.h"
+
+1524835924 e:\e\ds\c02\09extenlinkedlist\extenlinkedlist.h
+	<stdio.h>
+	"E:/E/DS/C02/01SequenceList/Status.h"
+	"E:/E/DS/C02/01SequenceList/Scanf.c"
+
+1523980014 e:\e\ds\c02\01sequencelist\status.h
+
+1523957189 e:\e\ds\c02\01sequencelist\scanf.c
+	<stdio.h>
+	<string.h>
+	<stdarg.h>
+	<ctype.h>
+
